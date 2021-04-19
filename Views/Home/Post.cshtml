@@ -1,0 +1,12 @@
+@model IEnumerable<Cellogram.Models.Post>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="blog-posts">
+    @foreach (var post in Model)
+    {
+        @await Html.PartialAsync("_Post", post)
+    }
+</div>
