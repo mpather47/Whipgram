@@ -85,3 +85,10 @@ C:\Users\Gizelle\Desktop\Cellogram\bin\Debug\netcoreapp3.1\runtimes\win-x86\nati
 C:\Users\Gizelle\Desktop\Cellogram\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\Gizelle\Desktop\Cellogram\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Gizelle\Desktop\Cellogram\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Gizelle\Desktop\Cellogram\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Gizelle\Desktop\Cellogram\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Gizelle\Desktop\Cellogram\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Gizelle\Desktop\Cellogram\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Gizelle\Desktop\Cellogram\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Gizelle\Desktop\Cellogram\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Gizelle\Desktop\Cellogram\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs

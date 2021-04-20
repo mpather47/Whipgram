@@ -4,7 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 using Cellogram.Models;
 
 namespace Cellogram.Controllers
@@ -20,13 +23,15 @@ namespace Cellogram.Controllers
             _logger = logger;
         }
 
-
+        [Authorize]
         public IActionResult Index()
         {
-            return View();
+            var posts = _db.Posts.OrderByDescending(x => x.Posted).Take(5).ToArray();
+
+             return View(posts);
         }
 
-       
+       [Authorize]
        public IActionResult Post()
        {
             var posts = _db.Posts.OrderByDescending(x => x.Posted).Take(5).ToArray();
@@ -34,19 +39,21 @@ namespace Cellogram.Controllers
              return View(posts);
        }
 
+        [Authorize]
         [HttpGet, Route("create")]
         public IActionResult Create()
         {
             return View();
         }
-
+        
+        [Authorize]
        [HttpPost, Route("create")]
        public IActionResult Create(Post post)
        {
            if(!ModelState.IsValid)
                 return View();
 
-            post.User = "spacemonkey303";
+            post.User = User.Identity.Name;
             post.Posted = DateTime.Now;
             post.Time = DateTime.Now.ToLongTimeString();
             post.Likes = 12;

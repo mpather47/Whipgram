@@ -38,6 +38,15 @@ namespace Cellogram
                 options.UseSqlServer(connectionString);
             });
 
+             services.AddDbContext<IdentityDataContext>(options =>
+            {
+                var connectionString = configuration.GetConnectionString("IdentityDataContext");
+                options.UseSqlServer(connectionString);
+            });
+
+             services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<IdentityDataContext>();
+
             services.AddControllersWithViews();
         }
 
@@ -58,6 +67,8 @@ namespace Cellogram
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
