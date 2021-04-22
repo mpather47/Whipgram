@@ -37,7 +37,7 @@ namespace Cellogram.Controllers
             }
 
             var result = await _signInManager.PasswordSignInAsync(
-                login.EmailAddress, login.Password,
+                login.UserName, login.Password,
                 login.RememberMe, false
             );
 
@@ -78,7 +78,8 @@ namespace Cellogram.Controllers
             var newUser = new IdentityUser
             {
                 Email = registration.EmailAddress,
-                UserName = registration.EmailAddress,
+                UserName = registration.UserName,
+               
             };
 
             var result = await _userManager.CreateAsync(newUser, registration.Password);

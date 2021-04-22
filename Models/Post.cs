@@ -28,6 +28,6 @@ namespace Cellogram.Models
         public String Image {get;set;}
         public String Body {get; set;}
         public DateTime Posted {get; set;}
-        public String Time {get;set;}
+        
     }
 }

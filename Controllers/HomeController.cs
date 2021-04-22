@@ -55,9 +55,8 @@ namespace Cellogram.Controllers
 
             post.User = User.Identity.Name;
             post.Posted = DateTime.Now;
-            post.Time = DateTime.Now.ToLongTimeString();
             post.Likes = 12;
-            post.ProfileImage = "https://scontent-jnb1-1.xx.fbcdn.net/v/t1.6435-1/p200x200/67740894_2353677471419768_1908112282936672256_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=7206a8&_nc_ohc=9Asn5NoHW5wAX8i63dQ&_nc_ht=scontent-jnb1-1.xx&tp=6&oh=5532842367177dbb2a681338aa693da3&oe=60A1B467";
+            post.ProfileImage = "https://secure.gravatar.com/avatar/?s=190&d=mm&r=g";
 
             _db.Posts.Add(post);
             _db.SaveChanges();

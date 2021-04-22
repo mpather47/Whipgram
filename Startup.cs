@@ -32,6 +32,8 @@ namespace Cellogram
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           
+
             services.AddDbContext<WgDataContext>(options =>
             {
                 var connectionString = configuration.GetConnectionString("WgDataContext");
@@ -44,10 +46,15 @@ namespace Cellogram
                 options.UseSqlServer(connectionString);
             });
 
+            
+
              services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<IdentityDataContext>();
 
+            
+            
             services.AddControllersWithViews();
+            services.AddTransient<TimeAgoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

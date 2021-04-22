@@ -16,7 +16,7 @@ namespace Cellogram.Models
         [Required]
         [ MaxLength(500)]
         [Display(Name = "Username")]
-        public string Username { get; set; }
+        public string UserName { get; set; }
 
 
         [Required]
