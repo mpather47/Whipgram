@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gizelle\\Desktop\\Cellogram\\Cellogram.csproj": {}
+    "C:\\Users\\Marcell\\Documents\\Cellogram\\Cellogram.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gizelle\\Desktop\\Cellogram\\Cellogram.csproj": {
+    "C:\\Users\\Marcell\\Documents\\Cellogram\\Cellogram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gizelle\\Desktop\\Cellogram\\Cellogram.csproj",
+        "projectUniqueName": "C:\\Users\\Marcell\\Documents\\Cellogram\\Cellogram.csproj",
         "projectName": "Cellogram",
-        "projectPath": "C:\\Users\\Gizelle\\Desktop\\Cellogram\\Cellogram.csproj",
-        "packagesPath": "C:\\Users\\Gizelle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gizelle\\Desktop\\Cellogram\\obj\\",
+        "projectPath": "C:\\Users\\Marcell\\Documents\\Cellogram\\Cellogram.csproj",
+        "packagesPath": "C:\\Users\\Marcell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marcell\\Documents\\Cellogram\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Gizelle\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Marcell\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -87,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

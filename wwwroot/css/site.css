@@ -69,3 +69,40 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+.wrapper {
+	padding: 5em;
+
+}
+
+.card {
+	position: relative;
+	
+}
+
+.card.loading .card-content {
+	filter: blur(5px);
+	overflow: hidden;
+	padding-bottom: 200px;
+}
+
+.card-overlay {
+	
+	pointer-events: none;
+	position: absolute;
+	background: rgba(255,255,255,0.3);
+	opacity: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card.loading .card-overlay {
+	pointer-events: initial;
+	opacity: 1;
+}

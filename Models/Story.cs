@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Cellogram.Models
 {
-    public class Post
+    public class Story
     {   
         public long Id { get; set; }
 
@@ -24,9 +24,7 @@ namespace Cellogram.Models
 
         public String ProfileImage {get; set;}
         public String User {get; set;}
-        public int Likes {get; set;}
         public String Image {get;set;}
-        public String Body {get; set;}
         public DateTime Posted {get; set;}
         
     }

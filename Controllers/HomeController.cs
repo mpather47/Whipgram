@@ -25,16 +25,27 @@ namespace Cellogram.Controllers
 
         [Authorize]
         public IActionResult Index()
-        {
-            var posts = _db.Posts.OrderByDescending(x => x.Posted).Take(5).ToArray();
-
-             return View(posts);
+        {   
+            ViewModel mymodel = new ViewModel();  
+            mymodel.Storys = _db.StoryDB.ToArray();
+            mymodel.Posts = _db.Posts.OrderByDescending(x => x.Posted).Take(5).ToArray();
+           
+        
+            return View(mymodel);
         }
 
        [Authorize]
        public IActionResult Post()
        {
             var posts = _db.Posts.OrderByDescending(x => x.Posted).Take(5).ToArray();
+
+             return View(posts);
+       }
+
+        [Authorize]
+       public IActionResult Story()
+       {
+            var posts = _db.StoryDB.OrderByDescending(x => x.Posted).Take(5).ToArray();
 
              return View(posts);
        }
@@ -63,6 +74,32 @@ namespace Cellogram.Controllers
 
             return View();
        }
+
+        [Authorize]
+        [HttpGet, Route("createS")]
+        public IActionResult CreateStory()
+        {
+            return View();
+        }
+        
+       [Authorize]
+       [HttpPost, Route("createS")]
+       public IActionResult CreateStory(Story story)
+       {
+           if(!ModelState.IsValid)
+                return View();
+
+            story.User = User.Identity.Name;
+            story.Posted = DateTime.Now;
+           
+            story.ProfileImage = "https://secure.gravatar.com/avatar/?s=190&d=mm&r=g";
+
+            _db.StoryDB.Add(story);
+            _db.SaveChanges();
+
+            return View();
+       }
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

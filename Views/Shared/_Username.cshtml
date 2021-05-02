@@ -1,0 +1,14 @@
+@model  IEnumerable<Cellogram.Models.Story>
+ 
+ @foreach (var item in Model)
+ {
+    <div class="stories__item stories__item--active" onclick="openModal();currentSlide(1)">
+      <button>
+        <div class="stories__item-picture">
+          <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="gail_pena's profile picture">
+        </div>
+        <span class="stories__item-username">@item.User</span>
+      </button>
+  </div>
+ }
+ 

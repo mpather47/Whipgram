@@ -1,0 +1,27 @@
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model Cellogram.Models.Story
+@{
+    Layout = "_Layout";
+}
+
+<h1>Create Story</h1>
+
+<fieldset>
+
+    <form asp-action="CreateStory" asp-controller="Home">
+
+        <div asp-validation-summary="ModelOnly" class="input-validation-error"></div>
+
+        <p>
+            <label asp-for="Image"></label>
+            <input asp-for="Image" class="form-control" placeholder="Paste image URL" />
+            
+        </p>
+
+        <p>
+            <button type="submit">Create Story</button>
+        </p>
+
+    </form>
+
+</fieldset>
